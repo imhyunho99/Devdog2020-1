@@ -150,37 +150,27 @@ function games() {
 	switch (randomGame) {
 		case 1:
 			return square();
-			break;
 		case 2:
 			return oddNumberAdd();
-			break;
 		case 3:
 			return binMul();
-			break;
 		case 4:
 			return Mul();
-			break;
 		case 5:
 			return quadAdd();
-			break;
 		case 6:
 			return triAdd();
-			break;
 		case 7:
 			return binAdd();
-			break;
 		case 8:
 			return quadSub();
-			break;
 		case 9:
 			return triSub();
-			break;
 		case 10:
 			return binSub();
-			break;
 	}
 }
-
+let fale = 0;
 let alcoholLeft = document.querySelector(".js-alcoholLeft");
 function plus_click() {
 	if (changeToAnother <= 0){
@@ -193,6 +183,33 @@ function plus_click() {
 				if (k % 2 == 0){
 					if ( games() == false){
 						alcoholLeft.innerText = '오답입니다. 휴식을 취하시길 권유합니다'
+						fale = fale + 1;
+						switch (fale) {
+							case 1:
+								document.body.style.backgroundColor = "#F6CECE";
+								break;
+							case 2:
+								document.body.style.backgroundColor = "#F5A9A9";
+								break;
+							case 3:
+								document.body.style.backgroundColor = "#F78181";
+								break;
+							case 4:
+								document.body.style.backgroundColor = "#FA5858";
+								break;
+							case 5:
+								document.body.style.backgroundColor = "#FE2E2E";
+								break;
+							case 6:
+								document.body.style.backgroundColor = "#FF0000";
+								break;
+							case 7:
+								document.body.style.backgroundColor = "#DF0101";
+								break;
+							default :
+								document.body.style.backgroundColor = "#2A0A0A";
+								alcoholLeft.innerText = '너무 많이 틀렸습니다.\n더이상 게임을 진행하지 마세요';
+						}
 					}
 				}
 			}
