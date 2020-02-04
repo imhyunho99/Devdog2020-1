@@ -1,7 +1,7 @@
-var limited = localStorage.currentLimit;
-var change = document.querySelector(".js-change");
-var btn = document.querySelector("#choose");
-var changeToAnother = 1;//소주를 다른 알코올로 바꾼거 몇잔인지
+let limited = localStorage.currentLimit;
+let change = document.querySelector(".js-change");
+let btn = document.querySelector("#choose");
+let changeToAnother = 1;//소주를 다른 알코올로 바꾼거 몇잔인지
 
 function changer(liquor) {
 
