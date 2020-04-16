@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
     <title>알코올탐지기</title>
-    <link rel="stylesheet" href="soju.css" />
+    <link rel="stylesheet" href="soju.css"></link>
+    <script type="text/javascript" src="clock.js"></script>
+    <script type="text/javascript" src="limit.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="change.js"></script>
 </head>
 
 <body>
@@ -13,6 +17,8 @@
     </div>
     <form class="js-form form">
         <input type="text" placeholder="이름을 입력해 주세요." />
+        <input type="date" placeholder="생년월일" />
+        <button type="submit">submit</button>
     </form>
     <form class="js-limit limit">
         <input type="number" placeholder="소주 주량(잔)을 입력" />
@@ -33,10 +39,6 @@
     <h3 class="js-change change"></h3>
     <button class = "js-click click" onclick="plus_click();">🍺한잔해~🍺</btn>
     <h1 class = "js-alcoholLeft alcoholLeft"></h1>
-    <script src="clock.js"></script>
-    <script src="limit.js"></script>
-    <script src="game.js"></script>
-    <script src="change.js"></script>
 </body>
 
 </html>
