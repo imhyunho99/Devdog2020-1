@@ -1,4 +1,4 @@
-const clockContainer = document.querySelector(".js-clock"), clockTitle = clockContainer.querySelector("h1");
+var clockContainer, clockTitle;
 
 function getTime() {
     const date = new Date();
@@ -12,5 +12,3 @@ function init(){
     getTime();
     setInterval(getTime,1000);
 }
-
-init();

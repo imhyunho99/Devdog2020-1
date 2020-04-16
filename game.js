@@ -4,15 +4,15 @@ function oddNumberAdd(){
 	for(let i = 1 ; i<=a ; i++){
 		if(i%2 != 0){
 			sum = sum + i;
+	
 		}
+	}
 	let ans = prompt(a + "이하의 홀수를 모두 더하시오\n" + "정답을 입력하세요");
 	if (ans == sum){
 		return true;
 	}
 	else{
 		return false;
-	}
-	console.log(ans);
 	}
 }
 
@@ -28,7 +28,6 @@ function binMul() {
 	else {
 		return false;
 	}
-	console.log(ans);
 }
 
 //한 자리수 곱셈
@@ -43,7 +42,6 @@ function Mul() {
 	else {
 		return false;
 	}
-	console.log(ans);
 }
 
 //네 자리수 덧셈
@@ -58,7 +56,6 @@ function quadAdd() {
 	else {
 		return false;
 	}
-	console.log(ans);
 }
 
 //세 자리수 덧셈
@@ -170,12 +167,14 @@ function games() {
 			return binSub();
 	}
 }
+
+
 let fale = 0;
-let alcoholLeft = document.querySelector(".js-alcoholLeft");
+let alcoholLeft;
 function plus_click() {
 	if (changeToAnother <= 0){
 		if (changeToAnother <= 0){
-			alcoholLeft.innerText = `당신은/ 주량을 넘었습니다. 게임을 시작합니다.`;
+			
 			changeToAnother = changeToAnother -1;
 			if (changeToAnother < 0){
 				alcoholLeft.innerText = Math.abs(changeToAnother) +'잔만큼 더 마셨습니다.\n 버튼을 눌러 게임을 무작위로 진행하세요.';
