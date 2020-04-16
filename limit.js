@@ -1,10 +1,9 @@
-const form = document.querySelector(".js-form"),
-    input = form.querySelector("input"),
-    greeting = document.querySelector(".js-greeting"),
-    formLimit = document.querySelector(".js-limit"),
-    inputLimit = formLimit.querySelector("input");
-    greetingLimit = document.querySelector(".js-greetingLimit");
-
+var form,
+    input,
+    greeting,
+    formLimit,
+    inputLimit,
+    greetingLimit;
 
 const USER_LS = "currentUser",//local storage
     SHOWING_CN = "showing", 
@@ -52,7 +51,7 @@ function paintGreeting(text) {
 function paintLimit(number){
     formLimit.classList.remove(SHOWINGLIMIT_CN);
     greetingLimit.classList.add(SHOWINGLIMIT_CN);
-    greetingLimit.innerText=`당신의 주량은 소주${number}잔입니다.`
+    greetingLimit.innerText=`당신의 주량은 소주 ${number}잔입니다.`
 }
 
 function loadName() {
@@ -71,7 +70,7 @@ function loadName() {
     }
 }
 
-function init() {
+function _init() {
+    localStorage.clear();
     loadName();
 }
-init();
