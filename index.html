@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
     <title>알코올탐지기</title>
-    <link rel="stylesheet" href="soju.css"></link>
+    <link rel="stylesheet" href="soju.css">
+    </link>
+    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="clock.js"></script>
     <script type="text/javascript" src="limit.js"></script>
     <script type="text/javascript" src="game.js"></script>
@@ -17,11 +19,14 @@
     </div>
     <form class="js-form form">
         <input type="text" placeholder="이름을 입력해 주세요." />
-        <input type="date" placeholder="생년월일" />
+    </form>
+    <form class="js-birthday birthday">
+        <input type="date" id="birthday" />
         <button type="submit">submit</button>
     </form>
     <form class="js-limit limit">
         <input type="number" placeholder="소주 주량(잔)을 입력" />
+        <button type="submit">submit</button>
     </form>
     <select name="liquor" id="liquor">
         <option value="">주종</option>
@@ -33,12 +38,13 @@
         <option value="소맥">소맥(mix) 1잔 (200ml) 15도</option>
         <option value="바카디">바카디 151프루프 1잔 (30ml) 75.5도</option>
     </select>
-    <button id = "choose">확인</button>
+    <button id="choose">확인</button>
     <h1 class="js-greeting greeting"></h1>
     <h2 class="js-greetingLimit greetingLimit"></h2>
+    <h2 class="js-greetingBirthday greetingBirthday"></h2>
     <h3 class="js-change change"></h3>
-    <button class = "js-click click" onclick="plus_click();">🍺한잔해~🍺</btn>
-    <h1 class = "js-alcoholLeft alcoholLeft"></h1>
+    <button class="js-click click" onclick="plus_click();">🍺한잔해~🍺</btn>
+        <h1 class="js-alcoholLeft alcoholLeft"></h1>
 </body>
 
 </html>

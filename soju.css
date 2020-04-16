@@ -4,9 +4,9 @@ body{
  	text-align: center;
 }
 
-.form,.limit,.greeting,.greetingLimit{
+.form,.limit,.greeting,.greetingLimit,.birthday{
     display:none;
 }
-.showing,.showingLimit,change{
+.showing,.showingLimit,.showingBirthday,.change,.showingBirthday{
     display:block;
 }
