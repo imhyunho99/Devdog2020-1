@@ -1,3 +1,4 @@
+//홀수 모두 더하기
 function oddNumberAdd(){
 	let a = Math.floor(Math.random() * 10 + 1);
 	let sum = 0;
@@ -72,7 +73,7 @@ function triAdd() {
 	}
 }
 
-//두 자리수 곱셈
+//두 자리수 덧셈
 function binAdd() {
 	let a = Math.floor(Math.random() * 100 + 1);
 	let b = Math.floor(Math.random() * 100 + 1);
@@ -171,17 +172,20 @@ function games() {
 
 let fale = 0;
 let alcoholLeft;
-function plus_click() {
+function plus_click(event) {
 	if (changeToAnother <= 0){
 		if (changeToAnother <= 0){
-			
+			if(changeToAnother==0){
+				alert('주량을 초과했습니다. 게임을 시작합니다.');
+			}
 			changeToAnother = changeToAnother -1;
 			if (changeToAnother < 0){
 				alcoholLeft.innerText = Math.abs(changeToAnother) +'잔만큼 더 마셨습니다.\n 버튼을 눌러 게임을 무작위로 진행하세요.';
 				let k =  Math.floor(Math.random() * 10 + 1);
-				if (k % 2 == 0){
+				if (k % 2 == 0){//50퍼센트의 확률로 게임시작
 					if ( games() == false){
-						alcoholLeft.innerText = '오답입니다. 휴식을 취하시길 권유합니다'
+						alert('오답입니다. 휴식을 취하시길 권유합니다');
+						alcoholLeft.innerText = Math.abs(changeToAnother) +'잔만큼 더 마셨습니다.';
 						fale = fale + 1;
 						switch (fale) {
 							case 1:
@@ -196,18 +200,11 @@ function plus_click() {
 							case 4:
 								document.body.style.backgroundColor = "#FA5858";
 								break;
-							case 5:
-								document.body.style.backgroundColor = "#FE2E2E";
-								break;
-							case 6:
-								document.body.style.backgroundColor = "#FF0000";
-								break;
-							case 7:
-								document.body.style.backgroundColor = "#DF0101";
-								break;
 							default :
 								document.body.style.backgroundColor = "#2A0A0A";
-								alcoholLeft.innerText = '너무 많이 틀렸습니다.\n더이상 게임을 진행하지 마세요';
+								document.querySelector(".warning").classList.remove("notshow");
+								document.querySelector(".js-click").classList.add("notshow");
+								document.querySelector(".js-click").classList.add("notshow");
 						}
 					}
 				}
@@ -217,7 +214,5 @@ function plus_click() {
 		changeToAnother = changeToAnother - 1;
 		changeToAnother = changeToAnother.toFixed(0);
 		alcoholLeft.innerText = `${changeToAnother}잔만 더 마시면 꼴까닥`;
-
-		//주량이 초과하면 두번마다 한번씩 문제 무작위 출제
 	}
 }

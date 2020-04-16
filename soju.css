@@ -4,9 +4,12 @@ body{
  	text-align: center;
 }
 
-.form,.limit,.greeting,.greetingLimit,.birthday{
+.form,.limit,.greeting,.greetingLimit,.birthday,.notshow{
     display:none;
 }
-.showing,.showingLimit,.showingBirthday,.change,.showingBirthday{
+.showing,.showingLimit,.showingBirthday,.change{
     display:block;
+}
+.warning{
+    background-color:red;
 }

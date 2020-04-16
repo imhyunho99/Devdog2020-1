@@ -1,4 +1,4 @@
-var clockContainer, clockTitle;
+var clockContainer, clockTitle;//시간 보여주기
 
 function getTime() {
     const date = new Date();
@@ -10,5 +10,5 @@ function getTime() {
 
 function init(){
     getTime();
-    setInterval(getTime,1000);
+    setInterval(getTime,1000);//1초마다 시간변경
 }
