@@ -2,6 +2,7 @@ window.onload = function() {
     clockContainer = document.querySelector(".js-clock");
     clockTitle = clockContainer.querySelector("h1");
     init();
+    duringTitle= this.clockContainer.querySelector("h2");
     // clock
 
     form = document.querySelector(".js-form");

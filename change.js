@@ -1,7 +1,8 @@
-let limited = localStorage.currentLimit;
+let limited = localStorage.currentLimit;//자신의 주량을 변수 limited에 저장
 let change;
 let btn;
-changeToAnother = 1;//소주를 다른 알코올로 바꾼거 몇잔인지
+changeToAnother = 1;
+//도수를 계산해 자신의 소주 주량을 다른 음료의 주량으로 계싼
 
 function changer(liquor) {
 
@@ -40,30 +41,4 @@ function __init() {
         let liquor = document.querySelector('#liquor').value;
         changer(liquor);
     })
-}
-
-window.onload = function() {
-    clockContainer = document.querySelector(".js-clock");
-    clockTitle = clockContainer.querySelector("h1");
-    init();
-    // clock
-
-    form = document.querySelector(".js-form");
-    input = form.querySelector("input");
-    greeting = document.querySelector(".js-greeting");
-    formLimit = document.querySelector(".js-limit");
-    inputLimit = formLimit.querySelector("input");
-    greetingLimit = document.querySelector(".js-greetingLimit");
-    _init();
-    // limit
-
-    alcoholLeft = document.querySelector(".js-alcoholLeft");
-    // game
-
-    change = document.querySelector(".js-change");
-    btn = document.querySelector("#choose");
-    limited = localStorage.currentLimit;
-    changeToAnother = 1;
-    // change
-    __init();
 }
